@@ -1,189 +1,167 @@
-# EmployWise User Management System
+# Employee Management System
 
-A React-based user management system that integrates with the Reqres API to perform basic user management functions.
+A modern, responsive web application for managing employee data, built with React and Tailwind CSS.
 
 ## Features
 
-- **Authentication**: Secure login system using Reqres API
-- **User Management**: View, edit, and delete users
-- **Pagination**: Navigate through user lists
-- **Responsive Design**: Works on both desktop and mobile devices
-- **Modern UI**: Built with Tailwind CSS for beautiful, responsive design
-- **Real-time Feedback**: Toast notifications for user actions
+- **User Authentication**: Secure login system with JWT token management
+- **Employee Management**: View, edit, and manage employee details
+- **Modern UI**: Clean and intuitive interface built with Tailwind CSS
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Real-time Updates**: Instant feedback on user actions
+- **Error Handling**: Comprehensive error management and user notifications
+- **API Integration**: Seamless integration with Reqres API for user data
 
 ## Prerequisites
 
-- Node.js (v18.17.0 or higher)
-- npm (v10.9.0 or higher)
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- Git
 
 ## Installation
 
 1. Clone the repository:
 
-```bash
-git clone <repository-url>
-cd employee-project
-```
+   ```bash
+   git clone https://github.com/pkjaknap/employee-management-system.git
+   cd employee-management-system
+   ```
 
 2. Install dependencies:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-## Available Scripts
+3. Start the development server:
 
-In the project directory, you can run:
+   ```bash
+   npm run dev
+   ```
 
-### `npm run dev`
-
-Runs the app in development mode.\
-Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.
-
-### `npm run preview`
-
-Locally preview the production build.
-
-## Deployment to Render
-
-1. **Create a Render Account**
-
-   - Go to [render.com](https://render.com)
-   - Sign up for a free account
-
-2. **Connect Your Repository**
-
-   - Click "New +" button
-   - Select "Web Service"
-   - Connect your GitHub/GitLab repository
-   - Select the repository containing this project
-
-3. **Configure Deployment**
-
-   - Name: employwise-user-management
-   - Environment: Node
-   - Build Command: `npm install && npm run build`
-   - Start Command: `npm run preview`
-   - Select the branch to deploy (usually main/master)
-
-4. **Environment Variables**
-
-   - No environment variables are required for this project
-
-5. **Deploy**
-   - Click "Create Web Service"
-   - Wait for the deployment to complete
-   - Your application will be available at `https://employwise-user-management.onrender.com`
+4. Open your browser and navigate to `http://localhost:5173`
 
 ## Project Structure
 
 ```
-src/
-├── components/     # Reusable components
-├── context/        # React context providers
-├── pages/          # Page components
-├── utils/          # Utility functions
-├── App.jsx         # Main application component
-└── main.jsx        # Application entry point
+employee-management-system/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── context/        # React context providers
+│   ├── pages/          # Page components
+│   ├── App.jsx         # Main application component
+│   └── main.jsx        # Application entry point
+├── public/             # Static assets
+├── index.html          # HTML template
+├── package.json        # Project dependencies
+├── tailwind.config.js  # Tailwind CSS configuration
+└── README.md           # Project documentation
 ```
 
 ## API Integration
 
-The application uses the Reqres API (https://reqres.in/) for:
+The application uses the Reqres API for authentication and user data:
 
-- Authentication
-- User management
-- Data fetching
-
-### API Endpoints Used
-
-- Login: `POST /api/login`
-- Get Users: `GET /api/users?page={page}`
-- Update User: `PUT /api/users/{id}`
-- Delete User: `DELETE /api/users/{id}`
-
-## Login Credentials
-
-Use the following credentials to log in:
-
-- Email: eve.holt@reqres.in
-- Password: cityslicka
+- **Authentication**: `/api/login`
+- **User Data**: `/api/users`
 
 ## Technologies Used
 
-- React
-- React Router
-- Tailwind CSS
-- Axios
-- React Toastify
+- **Frontend**:
+  - React.js
+  - Tailwind CSS (for styling)
+  - React Router (for navigation)
+  - React Context API (for state management)
+  - Axios (for API requests)
+  - React Toastify (for notifications)
 
-## Key Features Implementation
+## Key Features
 
-1. **Authentication**
+### Authentication
 
-   - Token-based authentication
-   - Secure token storage
-   - Protected routes
+- JWT-based authentication
+- Secure token storage
+- Protected routes
+- Automatic token refresh
 
-2. **User Management**
+### User Interface
 
-   - View user list with pagination
-   - Edit user details
-   - Delete users
-   - Real-time updates
+- Clean and modern design
+- Responsive layout
+- Intuitive navigation
+- Loading states
+- Error handling
 
-3. **UI/UX**
-   - Responsive design with Tailwind CSS
-   - Modern, clean interface
-   - Toast notifications
-   - Loading states
-   - Consistent styling across components
+### Data Management
 
-## Assumptions and Considerations
-
-1. **API Limitations**
-
-   - The Reqres API is a mock API, so changes are not persisted
-   - Some API endpoints might return mock data
-
-2. **Security**
-
-   - Tokens are stored in localStorage
-   - API endpoints are hardcoded for simplicity
-
-3. **Error Handling**
-
-   - Basic error handling for API calls
-   - User-friendly error messages
-
-4. **Performance**
-   - Pagination implemented for better performance
-   - Optimized re-renders using React hooks
-   - Tailwind CSS for optimized styling
+- Real-time data updates
+- Efficient state management
+- Optimized API calls
+- Error handling and recovery
 
 ## Future Improvements
 
-1. Add user search functionality
-2. Implement user creation
-3. Add more detailed user profiles
-4. Implement proper form validation
-5. Add unit tests
-6. Implement proper error boundaries
-7. Add dark mode support
-8. Enhance mobile responsiveness
+1. **Enhanced Security**:
+
+   - Implement refresh token rotation
+   - Add rate limiting
+   - Implement CSRF protection
+
+2. **Additional Features**:
+
+   - User profile management
+   - Role-based access control
+   - Advanced search and filtering
+   - Bulk operations
+   - Export functionality
+
+3. **UI/UX Enhancements**:
+
+   - Dark mode support
+   - Custom themes
+   - Enhanced mobile responsiveness
+   - Accessibility improvements
+
+4. **Performance Optimization**:
+   - Implement caching
+   - Add lazy loading
+   - Optimize bundle size
+   - Add service workers
+
+## Assumptions and Considerations
+
+1. **API Limitations**:
+
+   - Reqres API is used for demonstration
+   - Some features are simulated
+   - Data persistence is not implemented
+
+2. **Security**:
+
+   - Tokens are stored in localStorage (for demo purposes)
+   - Production implementation would require more security measures
+
+3. **Performance**:
+
+   - Optimized for modern browsers
+   - Responsive design considerations
+   - Efficient state management
+   - Simplified Tailwind CSS classes for better maintainability
+
+4. **Scalability**:
+   - Modular architecture
+   - Reusable components
+   - Easy to extend functionality
+   - Simplified styling system
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch
+2. Create a feature branch
 3. Commit your changes
 4. Push to the branch
-5. Create a new Pull Request
+5. Create a Pull Request
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
