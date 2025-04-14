@@ -8,7 +8,7 @@ A React-based user management system that integrates with the Reqres API to perf
 - **User Management**: View, edit, and delete users
 - **Pagination**: Navigate through user lists
 - **Responsive Design**: Works on both desktop and mobile devices
-- **Modern UI**: Built with Material-UI components
+- **Modern UI**: Built with Tailwind CSS for beautiful, responsive design
 - **Real-time Feedback**: Toast notifications for user actions
 
 ## Prerequisites
@@ -117,7 +117,7 @@ Use the following credentials to log in:
 
 - React
 - React Router
-- Material-UI
+- Tailwind CSS
 - Axios
 - React Toastify
 
@@ -137,10 +137,11 @@ Use the following credentials to log in:
    - Real-time updates
 
 3. **UI/UX**
-   - Responsive design
-   - Material-UI components
+   - Responsive design with Tailwind CSS
+   - Modern, clean interface
    - Toast notifications
    - Loading states
+   - Consistent styling across components
 
 ## Assumptions and Considerations
 
@@ -162,6 +163,7 @@ Use the following credentials to log in:
 4. **Performance**
    - Pagination implemented for better performance
    - Optimized re-renders using React hooks
+   - Tailwind CSS for optimized styling
 
 ## Future Improvements
 
@@ -171,6 +173,8 @@ Use the following credentials to log in:
 4. Implement proper form validation
 5. Add unit tests
 6. Implement proper error boundaries
+7. Add dark mode support
+8. Enhance mobile responsiveness
 
 ## Contributing
 
